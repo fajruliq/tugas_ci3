@@ -30,6 +30,7 @@ class Home extends CI_Controller
         if ($this->form_validation->run() == false) {
             $this->load->view('themplate/header', $data);
             $this->load->view('themplate/sidebar');
+            //  Edit
             $this->load->view('admin/tambah_brgmasuk', $data);
             $this->load->view('themplate/footer');
         } else {

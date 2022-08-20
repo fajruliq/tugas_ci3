@@ -25,4 +25,19 @@ class Tb_stock extends CI_Model
         $this->db->where('id', $id);
         $this->db->delete('tb_stock');
     }
+
+    public function updateStockBarang($id) {
+        $data = [
+                   "id" => $id,
+                   "nama_barang" => $this->input->POST('namabarang', true),
+                   "stock_barang" => $this->input->POST('stockbarang', true)
+                  
+               ];
+       
+           $this->db->where('id', $data['id']);
+           $this->db->update('tb_stock', $data);
+       
+           return true;
+       }
+
 }

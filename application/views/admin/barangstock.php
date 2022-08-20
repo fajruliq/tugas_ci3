@@ -15,7 +15,7 @@
                     
                 </div>
             <?php endif; ?>
-            <a class="btn btn-primary mb-4" href="<?= base_url(); ?>home/tambah_barangmasuk">Tambah Data</a>
+            <a class="btn btn-primary mb-4" href="<?= base_url(); ?>stockbarang/tambah_stockbarang">Tambah Data</a>
                       
                         <div class="card mb-4">
                             <div class="card-header">
@@ -35,16 +35,16 @@
                         </thead>
                         <tbody>
                         <?php $i = 1; ?>
-                            <?php foreach ($barangmasuk as $brgmsk) : ?>
+                            <?php foreach ($barangstock as $stcbrg) : ?>
                                 <tr>
 
                                     <td><?php echo $i; ?></td>
-                                    <td><?php echo $brgmsk['nama_barang']; ?></td>
-                                    <td><?php echo $brgmsk['stock_barang']; ?></td>
+                                    <td><?php echo $stcbrg['nama_barang']; ?></td>
+                                    <td><?php echo $stcbrg['stock_barang']; ?></td>
 
                                     <td>
-                                        <a href="<?= base_url(); ?>home/update_barangmasuk/<?= $brgmsk['id']; ?>"  class="btn btn-warning" role="button">Edit</a> ||
-                                        <a class="btn btn-danger" href="<?= base_url(); ?>home/hapus_barangmasuk/<?= $brgmsk['id']; ?>" onclick="return confirm('Yakin Menghapus Data?');" role="button">Delete</a>
+                                        <a href="<?= base_url(); ?>stockbarang/update_stockbarang/<?= $stcbrg['id']; ?>"  class="btn btn-warning" role="button">Edit</a> ||
+                                        <a class="btn btn-danger" href="<?= base_url(); ?>stockbarang/hapus_stockbarang/<?= $stcbrg['id']; ?>" onclick="return confirm('Yakin Menghapus Data?');" role="button">Delete</a>
                                     </td>
                                 </tr>
                                 <?php $i++; ?>

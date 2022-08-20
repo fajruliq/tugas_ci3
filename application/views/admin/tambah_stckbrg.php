@@ -1,8 +1,14 @@
 <!-- Content Wrapper. Contains page content -->
-<main>
-                <div class="card">
+<div class="content-wrapper">
+    
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+
+            <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Input Barang Masuk</h3>
+                    <h3 class="card-title">Input Stock Barang</h3>
                 </div>
 
                 <div class="card-body">
@@ -26,9 +32,12 @@
                             </div>
                       
                         <button type="reset" name="reset" class="btn btn-sm btn-warning">Reset</button>
-                        <button type="submit" name="simpan" class="btn btn btn-primary">Simpan</button>
+                        <button type="submit" name="simpan" class="btn-sm btn btn-primary">Simpan</button>
                     </form>
                 </div>
             </div>
-            </main>
-
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
