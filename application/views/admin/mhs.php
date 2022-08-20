@@ -35,7 +35,7 @@
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Tabel Ba</h3>
-                    <div class="d-flex justify-content-end"><a class="btn btn-primary" href="<?php base_url(); ?>mahasiswa/tambah_mhs" role="button">Tambah Data</a></div>
+                    <div class="d-flex justify-content-end"><a class="btn btn-primary" href="<?php base_url(); ?>home/tambah_mhs" role="button">Tambah Data</a></div>
                 </div>
 
 
