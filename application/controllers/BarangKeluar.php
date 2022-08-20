@@ -1,20 +1,20 @@
 <?php
-class Home extends CI_Controller
+class BarangKeluar extends CI_Controller
 {
     //pemanggilan Db dengan controler
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('tb_barangmasuk');
+        $this->load->model('tb_barangkeluar');
     }
     public function index()
     {
         $data['title'] = 'Data Barang Masuk';
-        $data['barangmasuk'] = $this->tb_barangmasuk->get_tb_barangmasuk();
+        $data['barangmasuk'] = $this->tb_barangkeluar->get_tb_barangkeluar();
 
         $this->load->view('themplate/header', $data);
         $this->load->view('themplate/sidebar');
-        $this->load->view('admin/barangmasuk', $data);
+        $this->load->view('admin/barangkeluar', $data);
         $this->load->view('themplate/footer');
     }
     
@@ -34,7 +34,7 @@ class Home extends CI_Controller
             $this->load->view('themplate/footer');
         } else {
 
-            $this->tb_barangmasuk->tambahDataMasukk();
+            $this->tb_barangkeluar->tambahDataMasukk();
             $this->session->set_flashdata('flash', 'Ditambahkan');
             redirect('/');
         }
@@ -53,7 +53,7 @@ class Home extends CI_Controller
             $this->load->view('themplate/footer');
         } else {
 
-            $this->tb_barangmasuk->updateDataMasuk($id);
+            $this->tb_barangkeluar->updateDataMasuk($id);
             $this->session->set_flashdata('flash', 'di Update');
             redirect('/');
         }
@@ -61,7 +61,7 @@ class Home extends CI_Controller
 
     public function hapus_barangmasuk($id)
     {
-        $this->tb_barangmasuk->hapusDataMasukk($id);
+        $this->tb_barangkeluar->hapusDataMasukk($id);
         $this->session->set_flashdata('flash', 'Dihapus');
         redirect('/');
     }

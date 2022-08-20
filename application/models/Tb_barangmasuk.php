@@ -12,7 +12,6 @@ class Tb_barangmasuk extends CI_Model
     public function tambahDataMasukk()
     {
         $data = [
-            "id" => $this->input->POST('id', true),
             "nama_barang" => $this->input->POST('namabarang', true),
             "stock_barang" => $this->input->POST('stockbarang', true)
            
@@ -25,4 +24,18 @@ class Tb_barangmasuk extends CI_Model
         $this->db->where('id', $id);
         $this->db->delete('tb_barangmasuk');
     }
+
+public function updateDataMasuk($id) {
+ $data = [
+            "id" => $id,
+            "nama_barang" => $this->input->POST('namabarang', true),
+            "stock_barang" => $this->input->POST('stockbarang', true)
+           
+        ];
+
+    $this->db->where('id', $data['id']);
+    $this->db->update('tb_barangmasuk', $data);
+
+    return true;
+}
 }

@@ -5,12 +5,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Data Ba</h1>
+                    <h1 class="m-0">Data Barang Masuk</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard Data Ba</li>
+                        <li class="breadcrumb-item active">Dashboard Data Barang</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -34,8 +34,8 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Tabel Ba</h3>
-                    <div class="d-flex justify-content-end"><a class="btn btn-primary" href="<?php base_url(); ?>home/tambah_mhs" role="button">Tambah Data</a></div>
+                    <h3 class="card-title">Tabel Barang Masuk</h3>
+                    <div class="d-flex justify-content-end"><a class="btn btn-primary" href="<?php base_url(); ?>home/tambah_barangmasuk" role="button">Tambah Data</a></div>
                 </div>
 
 
@@ -51,16 +51,16 @@
                         </thead>
                         <tbody>
                             <?php $i = 1; ?>
-                            <?php foreach ($mahasiswa as $mhs) : ?>
+                            <?php foreach ($barangmasuk as $brgmsk) : ?>
                                 <tr>
 
                                     <td><?php echo $i; ?></td>
-                                    <td><?php echo $mhs['nama_barang']; ?></td>
-                                    <td><?php echo $mhs['stock_barang']; ?></td>
+                                    <td><?php echo $brgmsk['nama_barang']; ?></td>
+                                    <td><?php echo $brgmsk['stock_barang']; ?></td>
 
                                     <td>
-                                        <a href="#" class="btn btn-warning" role="button">Edit</a> ||
-                                        <a class="btn btn-danger" href="<?= base_url(); ?>/administrator/mahasiswa/hapus_mhs/<?= $mhs['id']; ?>" onclick="return confirm('Yakin Menghapus Data?');" role="button">Delete</a>
+                                        <a href="<?= base_url(); ?>/home/update_barangmasuk/<?= $brgmsk['id']; ?>"  class="btn btn-warning" role="button">Edit</a> ||
+                                        <a class="btn btn-danger" href="<?= base_url(); ?>/home/hapus_barangmasuk/<?= $brgmsk['id']; ?>" onclick="return confirm('Yakin Menghapus Data?');" role="button">Delete</a>
                                     </td>
                                 </tr>
                                 <?php $i++; ?>

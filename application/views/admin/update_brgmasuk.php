@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Data Mahasiswa</h1>
+
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -24,8 +24,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Input Mahasiswa</h3>
-                    <div class="d-flex justify-content-end"><a class="btn btn-primary" href="<?php base_url(); ?>mahasiswa/tambah_mhs" role="button">Tambah Data</a></div>
+                    <h3 class="card-title">Update Barang Masuk</h3>
                 </div>
 
                 <div class="card-body">
@@ -37,35 +36,17 @@
                     <!-- Form input mahasiswa -->
                     <form action="" method="POST">
                         <div class="form-group row">
-                            <label for="nim" class="col-sm-2 col-form-label">NIM</label>
+                            <label for="namabarang" class="col-sm-2 col-form-label">Nama Barang</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="nim" name="nim">
+                                <input type="text" class="form-control" id="namabarang" name="namabarang">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="nama" class="col-sm-2 col-form-label">Nama Lengkap</label>
+                            <label for="stockbarang" class="col-sm-2 col-form-label">Stock Barang</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="nama" name="nama">
+                                <input type="text" class="form-control" id="stockbarang" name="stockbarang">
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="agama" class="col-sm-2 col-form-label">Agama</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="agama" name="agama">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="email" class="col-sm-2 col-form-label">Email</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control" id="email" name="email">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="alamat" name="alamat">
-                            </div>
-                        </div>
+                      
                         <button type="reset" name="reset" class="btn btn-sm btn-warning">Reset</button>
                         <button type="submit" name="simpan" class="btn-sm btn btn-primary">Simpan</button>
                     </form>
