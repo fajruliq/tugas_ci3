@@ -29,7 +29,7 @@
                             <tr>
                                 <th>id</th>
                                 <th>Nama Barang</th>
-                                <th>Nama</th>
+                                <th>Stock Barang</th>
                                 
                             </tr>
                         </thead>
